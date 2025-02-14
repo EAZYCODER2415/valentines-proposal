@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="valentine's, love, proposal, feb 14th, i love you">
+        <meta name="description" content="Suspicious ahh stuff">
+          <title>
+              Will you be my Valentine?
+          </title>
+        <link rel="icon" type="image/x-icon" href="../media/zxdfgh.ico">
+        <link href="../style.css" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/valentine-day-personal-use" rel="stylesheet">
+        <script>
+            let yesButtonFontSize = 25;
+            let noMessages = ["No", "You sure?", "Even if it means breaking my heart???", "No don't do this to me...", "Pretty pleaseeee", "I'll do anything", "I can't live", "without you...", "Last chance", "sad :c"];
+            let i = 0;
+
+            function redirect() {
+                location.href = 'love_you.html';
+            }
+
+            function resistance() {
+                let yesButton = document.getElementById("yes");
+                let noButton = document.getElementById("no");
+                i++;
+                yesButtonFontSize += 15 * (i+1);
+                yesButton.style.fontSize = `${yesButtonFontSize}px`;
+                noButton.innerHTML = noMessages[i];
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <div class="center_img">
+                <figure>
+                    <img src="../media/gi1.gif" alt="pretty please???????">
+                </figure>
+                <h1>Will you be my forever love?</h1>
+            </div>
+            <div class="choices">
+                <button class="yes" id="yes" onclick="redirect();">Yes</button>
+                <button class="no" id="no" onclick="resistance();">No</button>
+            </div>
+        </main>
+        <h2>&copy; Thames Vorajayudhbong 2025</h2>
+    </body>
+</html>

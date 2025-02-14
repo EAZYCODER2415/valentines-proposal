@@ -7,7 +7,6 @@
 
 body {
     margin-top: 0;
-    overflow: hidden;
     background-color: #fae1f9;
     /**background-image: url('../media/background.png');
     background-repeat: no-repeat;
@@ -44,7 +43,7 @@ div.center_img figure {
 
 div.center_img2 figure {
     justify-content: center;
-    width: 50%;
+    width: 60%;
 }
 
 div.center_img figure img, div.center_img2 figure img {
@@ -107,6 +106,12 @@ button.no {
 button.proceed {
     border: 2px solid grey;
     background-color: #bd34eb;
+}
+
+button.next {
+    padding: 2% 3.5%;
+    font-size: 20px;
+    background-color: #7cdeba;
 }
 
 button:hover {
