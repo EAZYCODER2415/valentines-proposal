@@ -1,9 +1,13 @@
+* {
+    font-family: Arial;
+}
+
 body {
-    background-color: #fae8f7;
+    background-image: url('../media/background.png');
 }
 
 main {
-    margin: 0;
+    margin-top: 0;
     overflow: hidden;
 }
 
@@ -23,6 +27,7 @@ div.center_img figure {
 div.center_img figure img {
     width: 100%;
     height: fixed;
+    border-radius: 25%;
 }
 
 div.center_img h1 {
@@ -38,11 +43,12 @@ div.choices {
     justify-content: center;
     align-items: center;
     height: 200px;
+    z-index: 10;
 }
 
 button {
     padding: 2.5% 10%;
-    font-size: 65px;
+    font-size: 25px;
     margin-top: 20px;
     margin-right: 10px;
     border-radius: 7px;
@@ -50,6 +56,7 @@ button {
     cursor: pointer;
     color: #fff;
     transition: .15s ease;
+    z-index: 15;
 }
 
 button.yes {
@@ -66,3 +73,22 @@ button:hover {
     color: #000;
     background-color: #fff;
 }
+
+/** Laptop **/
+@media (max-width: 1075px) {
+    main {
+        left: 23%;
+    }
+}
+
+/** Tablet **/
+@media (max-width: 768px) {
+    main {
+        left: 15%;
+    }
+}
+
+body h1 {
+    text-align: center;
+}
+

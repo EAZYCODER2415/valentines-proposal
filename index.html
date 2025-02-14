@@ -11,12 +11,21 @@
         <link rel="icon" type="image/x-icon" href="../media/zxdfgh.ico">
         <link href="style.css" rel="stylesheet">
         <script>
+            let yesButtonFontSize = 25;
+            let noMessages = ["No", "You sure?", "Even if it means breaking my heart???", "No don't do this to me...", "Pretty pleaseeee", "I'll do anything", "I can't live", "without you...", "Last chance", "sad :c"];
+            let i = 0;
+
             function redirect() {
                 location.href = '../pages/love_you.html';
             }
 
             function resistance() {
-
+                let yesButton = document.getElementById("yes");
+                let noButton = document.getElementById("no");
+                i++;
+                yesButtonFontSize += 15 * (i+1);
+                yesButton.style.fontSize = `${yesButtonFontSize}px`;
+                noButton.innerHTML = noMessages[i];
             }
         </script>
     </head>
@@ -26,12 +35,13 @@
                 <figure>
                     <img src="../media/gi1.gif" alt="pretty please???????">
                 </figure>
-                <h1>Will you be my Valentine?</h1>
+                <h1>Will you be my forever love?</h1>
             </div>
             <div class="choices">
-                <button class="yes" onclick="redirect();">Yes</button>
-                <button class="no" onclick="resistance();">No</button>
+                <button class="yes" id="yes" onclick="redirect();">Yes</button>
+                <button class="no" id="no" onclick="resistance();">No</button>
             </div>
         </main>
+        <h1>&copy; Thames Vorajayudhbong 2025</h1>
     </body>
 </html>
