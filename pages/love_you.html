@@ -11,20 +11,51 @@
         <link rel="icon" type="image/x-icon" href="../media/zxdfgh.ico">
         <link href="../style.css" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/valentine-day-personal-use" rel="stylesheet">
+        <script>
+            function hide_form() {
+                var object = document.getElementById("lantern-form");
+                object.style.display = "none";
+                var object2 = document.getElementById("overlay");
+                object2.style.display = "none";
+            }
+
+            function openForm() {
+                /** add modal in front of user **/
+                var object = document.getElementById("lantern-form");
+                object.style.display = "block";
+                var object2 = document.getElementById("overlay");
+                object2.style.display = "block";
+                /** let form include name and wish**/
+                /** include confirmation button that closes the form and executes releaseLantern() **/
+            }
+        </script>
     </head>
     <body>
         <main class="main2">
             <div class="center_img2">
                 <figure>
-                    <img src="../media/gif2.gif" alt="pretty please???????">
+                    <img src="../media/nigga.gif" alt="pretty please???????">
                 </figure>
                 <h1>Thank you so muchhh!!!</h1>
             </div>
             <div class="sec2">
                 <h2>Thank you for everything darling and also for being you! I love you so much, let's continue to walk through life together as a couple and see where it takes us!!!</h2>
-                <button class="no">Proceed</button>
+                <button class="proceed" onclick="openForm()">Proceed</button>
             </div>
         </main>
         <h2>&copy; Thames Vorajayudhbong 2025</h2>
+        <div id="lantern-form" class="lantern-form">
+            <h1>Feedback Form</h1>
+            <p>Your message to this proposal message will be submitted to the sender's email, </p>
+            <div class="form">
+                <form onsubmit='submitData()' method="POST">
+                    <input type="text" name="subject" id="name" placeholder="Subject" required>
+                    <textarea rows="20" cols="54" name="message" id="wish-desc" placeholder="Type message here" required="true"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+                <button onclick="hide_form()">Back</button>
+            </div>
+        </div>
+        <div id="overlay"></div>
     </body>
 </html>
