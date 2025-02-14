@@ -8,11 +8,12 @@
 body {
     margin-top: 0;
     overflow: hidden;
-    background-image: url('../media/background.png');
+    background-color: #fae1f9;
+    /**background-image: url('../media/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: auto;
+    background-size: auto;**/
 }
 
 main {
