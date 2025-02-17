@@ -197,6 +197,10 @@ input[type=submit]:hover {
     opacity: 25%;
 }
 
+.home {
+    width: 45%;
+}
+
 /** Laptop **/
 @media (max-width: 1075px) {
     main {
